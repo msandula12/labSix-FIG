@@ -1,10 +1,11 @@
 function rando(userNumber) {
+	event.preventDefault();
+	var userNumber = document.getElementById("userNum").value;
 	var randomNumber = Math.ceil(Math.random() * 10);
+	var display = document.getElementById("displayMsg");
 	if (userNumber === randomNumber) {
-		console.log("Good work");
+		display.innerHTML = "Good work";
 	} else {
-		console.log("Not a match");
+		display.innerHTML = "Not a match ... Guess again!";
 	}
 }
-
-rando(1);
